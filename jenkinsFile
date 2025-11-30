@@ -1,0 +1,32 @@
+pipeline {
+    environment {
+        APP_NAME = "employee-service"
+    }
+    
+    agent { label 'Ubuntu-dev' }
+    
+
+    stages {
+        
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/Mahinder7953/Employee-Management.git'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                    sh 'mvn clean package -DskipTests'
+        
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sh "sudo cp target/*.jar /apps/apps-root/Employees-Management/${APP_NAME}.jar"
+            }
+        }
+        
+    }
+}
