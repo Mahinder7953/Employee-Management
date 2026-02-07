@@ -3,7 +3,7 @@ pipeline {
         APP_NAME = "employee-service"
     }
     
-    agent { label 'Ubuntu-dev' }
+    agent any
     
 
     stages {
