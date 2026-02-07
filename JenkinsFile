@@ -21,7 +21,7 @@ pipeline {
             steps {
                     sh 'java -version'
                     sh 'javac -version'
-                    sh ' /usr/local/bin/mvn clean package -DskipTests'
+                    sh ' /opt/maven/bin/mvn clean package -DskipTests'
         
             }
         }
