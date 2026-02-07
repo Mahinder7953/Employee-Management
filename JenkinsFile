@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools { 
-    jdk 'jdk-21' 
-    maven 'maven-3.9.12'
+    jdk 'java-21' 
+    maven 'Maven-3.9.12'
     }
     environment {
         APP_NAME = "employee-service"
