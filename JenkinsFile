@@ -1,10 +1,7 @@
 pipeline {
     environment {
         APP_NAME = "employee-service"
-    }
-    
-    agent any
-    
+    }    
 
     stages {
         
