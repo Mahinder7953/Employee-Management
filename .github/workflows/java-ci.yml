@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with Docker
 
 on:
   push:
@@ -26,3 +26,6 @@ jobs:
 
       - name: Build and test
         run: mvn clean verify
+
+      - name: Build Docker image
+        run: docker build -t employee-management:${{ github.sha }} .
